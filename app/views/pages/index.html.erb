@@ -1,0 +1,30 @@
+<h1>Interesting People:</h1>
+<div ng-app="app">
+ <div ng-controller="peopleCtrl">
+ <ol> 
+ <div ng-repeat="person in people"> 
+ <li><button ng-click="showBio(person)">{{person.name}}</button>
+ <br>
+<div ng-if="person.bioVisible"> {{person.bio}} </div>
+ </li>
+    <br> 
+ </div> 
+ </ol>
+
+ <h3> Add a new person: </h3>
+  <div>
+  <label> person name: </label>
+  <input ng-model="newPersonName">
+  </div>
+
+  <div>
+  <label> person bio: </label>
+  <input ng-model="newPersonBio">
+  </div>
+
+  <button ng-click="addPerson(newPersonName,newPersonBio)"> Add person </button>
+
+
+
+  </div>
+
